@@ -28,9 +28,13 @@ The intention is not to reinvent the wheel, but to make something of a game out 
     
 # TO DO
 - create second html/css/javascript for second page
-- figure out how to anchor text better
+- figure out how to anchor text better on the screen
 - font search
-- 
+- how to make just "feed.me" in the concept blurb bold
+- edit photoshop image so that there is no food framing the bottom of the image, and set the background color to match that so that it appears continuous
+- adjust recipe card opacity to slightly see through
+- swipe transitions
+    https://www.youtube.com/watch?v=eVwH3VL1EsA
 
 # If I have time...
 - make a printable version of the recipe carddd

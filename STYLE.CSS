@@ -1,14 +1,19 @@
 body{
-    background-image: url("https://cdn.shopify.com/s/files/1/0555/3445/2913/files/20210326_wechips17835_s50_56ca5e28-63ac-4696-9d73-56bd77f3f038_2048x2048.jpg?v=1630399649");
+    background-image: url("./assets/EDITEDBCKGRND.png");
+    /* background-image: url("https://cdn.shopify.com/s/files/1/0555/3445/2913/files/20210326_wechips17835_s50_56ca5e28-63ac-4696-9d73-56bd77f3f038_2048x2048.jpg?v=1630399649"); */
+    background-color: #ffcd01;
     background-size: cover;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
 }
 
-.page_content {
+.page1content {
     margin-top: 500px;
     margin: center
 }
+
+
 
 h1{
     
@@ -23,8 +28,6 @@ h2{
 button {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: center;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+
 }
 
