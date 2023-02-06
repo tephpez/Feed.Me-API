@@ -4,6 +4,9 @@ Recipe card generator for famished folk with decision fatigue.
 # Schedule 
 https://trello.com/b/scUAJYjl/feedme
 
+# Wireframing
+https://www.figma.com/file/r1h8dGSSXOAGF8RoZ7Cr3j/FEED.ME?node-id=4%3A5&t=WwQmNFAdgnXd1k6Q-1
+
 # Concept 
 Can't decide what to cook? Overwhelmed with the world wide web of options? Lettuce do the work! Enter: Feed.me - the app that thinks for you (bc let's be honest, you're too hungry to think rn)
 
