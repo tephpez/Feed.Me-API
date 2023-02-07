@@ -28,16 +28,10 @@ The intention is not to reinvent the wheel, but to make something of a game out 
 - Potential background images
     - https://st4.depositphotos.com/9012638/40083/i/450/depositphotos_400838660-stock-photo-autumn-cooking-background-organic-autumn.jpg
     - https://cdn.shopify.com/s/files/1/0555/3445/2913/files/20210326_wechips17835_s50_56ca5e28-63ac-4696-9d73-56bd77f3f038_2048x2048.jpg?v=1630399649
-    
-# TO DO
-- create second html/css/javascript for second page
-- figure out how to anchor text better on the screen
-- font search
-- how to make just "feed.me" in the concept blurb bold
-- edit photoshop image so that there is no food framing the bottom of the image, and set the background color to match that so that it appears continuous
-- adjust recipe card opacity to slightly see through
+
 - swipe transitions
     https://www.youtube.com/watch?v=eVwH3VL1EsA
+
 
 # If I have time...
 - make a printable version of the recipe carddd
