@@ -13,7 +13,10 @@ body{
     margin: center
 }
 
-
+#results{
+    min-height: 500px;
+    max-height: 750px;
+}
 
 h1{
     

@@ -23,13 +23,13 @@ The intention is not to reinvent the wheel, but to make something of a game out 
 
 # Links
 - API
-    - https://developer.edamam.com/edamam-recipe-api
+    - https://www.themealdb.com/api/json/v1/1/search.php?s=
 
 - Potential background images
     - https://st4.depositphotos.com/9012638/40083/i/450/depositphotos_400838660-stock-photo-autumn-cooking-background-organic-autumn.jpg
     - https://cdn.shopify.com/s/files/1/0555/3445/2913/files/20210326_wechips17835_s50_56ca5e28-63ac-4696-9d73-56bd77f3f038_2048x2048.jpg?v=1630399649
 
-- swipe transitions
+- Swipe transitions
     https://www.youtube.com/watch?v=eVwH3VL1EsA
 
 
