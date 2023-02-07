@@ -2,58 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>feed.Me</title>
+    <title>Om nom nom nom</title>
 </head>
 <body>
+    <button id="homeButton">
+        <a href="INDEX.HTML">home</a>
+    </button>
+<!-- SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS -->
+    <div id="feedMe">
+        <form id="searchBar">
+            <input 
+                id="inputBar" 
+                placeholder="what's cookin?"
+                value="">
+            <br><br>
+            <input
+                type="button"
+                id="searchButton"
+                value="feed.me"></input>
+            <input
+                type="button"
+                id="surpriseButton"
+                value="surprise.me"></input>
+        </form>
+    </div> <br>
 
-    
-    <form id="searchBar">
-        <input 
-            id="inputBar" 
-            placeholder="what's cookin?"
-            value="">
-        <br><br>
-        <input
-            type="button"
-            id="searchButton"
-            value="feed.me"></input>
-        <input
-            type="button"
-            id="surpriseButton"
-            value="surprise.me"></input>
-    </form>
-    <br>
-    <div id="results">
-        <h2 id="recipeName"></h2>
-        <br>
-        <h3 id="ingredient1"></h3>
-        <h3 id="ingredient2"></h3>
-        <h3 id="ingredient3"></h3>
-        <h3 id="ingredient4"></h3>
-        <h3 id="ingredient5"></h3>
-        <h3 id="ingredient6"></h3>
-        <h3 id="ingredient7"></h3>
-        <h3 id="ingredient8"></h3>
-        <h3 id="ingredient9"></h3>
-        <h3 id="ingredient10"></h3>
-        <h3 id="ingredient11"></h3>
-        <h3 id="ingredient12"></h3>
-        <h3 id="ingredient13"></h3>
-        <h3 id="ingredient14"></h3>
-        <h3 id="ingredient15"></h3>
-        <h3 id="ingredient16"></h3>
-        <h3 id="ingredient17"></h3>
-        <h3 id="ingredient18"></h3>
-        <h3 id="ingredient19"></h3>
-        <h3 id="ingredient20"></h3>
-
-
+<!-- RESULTS CONTAINER -  RECIPE NAME & INGREDIENTS LIST -->
+<div id="recipe">
+        <h3 id="recipeName"></h3>
+     <br>
+        <h4 id="ingredient1"></h4>
+        <h4 id="ingredient2"></h4>
+        <h4 id="ingredient3"></h4>
+        <h4 id="ingredient4"></h4>
+        <h4 id="ingredient5"></h4>
+        <h4 id="ingredient6"></h4>
+        <h4 id="ingredient7"></h4>
+        <h4 id="ingredient8"></h4>
+        <h4 id="ingredient9"></h4>
+        <h4 id="ingredient10"></h4>
+        <h4 id="ingredient11"></h4>
+        <h4 id="ingredient12"></h4>
+        <h4 id="ingredient13"></h4>
+        <h4 id="ingredient14"></h4>
+        <h4 id="ingredient15"></h4>
+        <h4 id="ingredient16"></h4>
+        <h4 id="ingredient17"></h4>
+        <h4 id="ingredient18"></h4>
+        <h4 id="ingredient19"></h4>
+        <h4 id="ingredient20"></h4>
 
     </div>
+
+    <input
+    type="button"
+    id="makeButton"
+    value="make.me"></input>
+
     <script src="script.js"></script>
 </body>
 </html>
