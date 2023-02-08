@@ -1,11 +1,11 @@
 body{
     background-image: url("./assets/EDITEDBCKGRND.png");
-    /* background-image: url("https://cdn.shopify.com/s/files/1/0555/3445/2913/files/20210326_wechips17835_s50_56ca5e28-63ac-4696-9d73-56bd77f3f038_2048x2048.jpg?v=1630399649"); */
     background-color: #ffcd01;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Sansita', sans-serif;
     text-align: center;
+    color: black;
 }
 
 
@@ -17,8 +17,25 @@ body{
 
 
 /* SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS */
-#feedMe{
+#searchContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 150px;
+    margin: center;
+    height: 150px;    
+    /* background-color: white;
+    opacity: 60%; */
+}
+
+#recipeNameContainer{
+    /* background-color: white; */
+    height: 60px;
+    width: 700px;
+    font-size: x-large;
+    padding: 0;
+
 }
 
 
@@ -28,13 +45,50 @@ body{
 }
 
 
-/* RESULTS CONTAINER */
-#recipe{
+/* RECIPE CONTAINER */
+#recipeContainer{
+    /* width: 1400px;
+    min-height: 600px;
+    max-height: 750px;
+    margin-left: 150px;
+    margin-right: 150px; */
+    /* background-color: white;
+    opacity: 60%; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* width: 1400px;
+    height: 750px; */
+}
+
+/* CARD CONTAINER */
+
+#imageContainer{
+    background-color:darkgreen;
+    width:620px;
+    height:600px;
+}
+#ingredientsContainer{
     min-height: 500px;
     max-height: 750px;
-    text-align: left;
-    margin-left: 150px;
-    margin-right: 150px;
+    width:200px;
+    height:600px;
+    text-align: center;
+    background-color: purple;
+    font-size: medium;
+}
+
+#directionsContainer{
+    background-color: chocolate;
+    width:400px;
+    height:600px;
+    font-size: medium;
+    font-style: italic;
+    padding-left: 10px;
+    padding-right:10px;
+
 }
 
 
@@ -51,30 +105,31 @@ h2{
 
 /* RECIPE NAME */
 h3{
+    font-size: larger;
 }
 
 
 /* INGREDIENTS */
 h4{
-    font-size: x-small;
+    /* font-size: x-small; */
     margin: 1px;
 }
 
 button {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
     margin: center;
     border-radius: 6px;
     border-width: 1px;
     font-family: 'Sansita', sans-serif;
     background-color: white;
 }
-
+/* ROUNDING INPUT BUTTONS */
 input{
     border-radius: 6px;
     border-width: 1px;
     font-family: 'Sansita', sans-serif;
 }
 
+/* MAKING TEXT INPUT BAR SQUARE VS ROUNDED INPUT BUTTONS */
 #inputBar{
     border-radius: 0px;
     border-width: 2px;

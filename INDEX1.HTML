@@ -13,7 +13,7 @@
 <body>
 
 <!-- SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS -->
-    <div id="feedMe">
+    <div id="searchContainer"><br>
         <form id="searchBar">
             <input 
                 id="inputBar" 
@@ -23,27 +23,22 @@
                 type="submit"
                 id="searchButton"
                 value="feed.me">
-            </input> <br><br>
-            <input
+            </input> 
+            <!-- <input
                 type="button"
                 id="surpriseButton"
                 value="surprise.me">
-            </input>
+            </input> <br> <br> -->
         </form>
-
-        <!-- <video id="recipe_video" width="320" height="240" controls>
-            <source href="" type="video/mp4">
-            <source href="" type="video/ogg">
-            Your browser does not support the video tag.
-        </video> -->
-
-    </div> 
-    <br>
+        <div id="recipeNameContainer">
+            <h3 id="recipeName"></h3>
+        </div>
+    </div> <br>
 
 <!-- RESULTS CONTAINER -  RECIPE NAME & INGREDIENTS LIST -->
-<div id="recipe">
-        <h3 id="recipeName"></h3>
-     <br>
+<main id="recipeContainer">
+
+     <div id="ingredientsContainer"><br>
         <h4 id="ingredient1"></h4>
         <h4 id="ingredient2"></h4>
         <h4 id="ingredient3"></h4>
@@ -63,12 +58,15 @@
         <h4 id="ingredient17"></h4>
         <h4 id="ingredient18"></h4>
         <h4 id="ingredient19"></h4>
-        <h4 id="ingredient20"></h4> <br> <br>
-    </div>
-    <!-- <div>
+        <h4 id="ingredient20"></h4>
+     </div>
+     <div id="directionsContainer">
         <h5 id="directions"></h5>
-    </div> -->
-
+     </div>
+     <div id="imageContainer">
+     </div>
+</div> 
+</main> <br> <br> <br>
     <input
         type="button"
         id="makeButton"
@@ -83,4 +81,3 @@
 </html>
 
 
-<!-- edit placeholder to italics? -->
