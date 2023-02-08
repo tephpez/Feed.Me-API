@@ -135,6 +135,8 @@ async function getSearchData (event) {
         .catch(err => {
             console.log("Error!", err)
     })
+    fetch(searchResult)
+        .then(res => {returnssh -T git@github.com})
 }
 searchButton.onclick = getSearchData
 
