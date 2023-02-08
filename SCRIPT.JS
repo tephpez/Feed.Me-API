@@ -85,8 +85,8 @@ async function getSurpriseData (event) {
             let ingredient20 = document.querySelector('#ingredient20')
             ingredient20.innerText = res.meals[0].strIngredient20
             // POPULATING DIRECTIONS
-            let directions = document.querySelector('#directions')
-            directions.innerText = res.meals[0].strInstructions
+            // let directions = document.querySelector('#directions')
+            // directions.innerText = res.meals[0].strInstructions
 
             // POPULATING IMAGE
 
@@ -115,10 +115,11 @@ async function getSearchData (event) {
     // "PREVENTDEFAULT" - PREVENTS THE PAGE FROM RELOADING - ALWAYS INCLUDE WHEN USING TEXT INPUT
     event.preventDefault()
     let textInput = document.getElementById("inputBar").value;
+    // possibly declare variable
     
-    // API SOURCE
-    let searchUrl = "https://www.themealdb.com/api/json/v1/1/filter.php?i="+textInput;
-    let searchResult = "www.themealdb.com/api/json/v1/1/lookup.php?i="+res.meals[randomSearchRecipe].idMeal;
+    // API SOURCE - FILTER BY MAIN INGREDIENT
+    let searchUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${textInput}`;
+    // API SOURCE - RANDOM RESULT
 
     // RETRIEVING DATA FROM API
     fetch(searchUrl)
@@ -126,17 +127,22 @@ async function getSearchData (event) {
         .then(res => {return res.json()})
         // USING JSON TO PERFORM OUR FUNCTIONS
         .then(res => {
-            // console.log("boop");
             console.log(res);
             // CODE FOR RANDOM RETURN VIA BRITTANY - https://www.jamesqquick.com/blog/build-a-javascript-memory-match-game/
             let randomSearchRecipe = Math.ceil(Math.random() * res.meals.length); // <<< RES.MEALS.LENGTH = TOTAL NUMBER OF RECIPES (11) - PICK ANUMBER BETWEEN 0 AND 11
-            console.log("success!", res.meals[randomSearchRecipe].strMeal)
+            console.log(res.meals[randomSearchRecipe].strMeal)
+            let searchResult = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${res.meals[randomSearchRecipe].idMeal}`;
+            fetch(searchResult) 
+                .then(res => { return res.json()})
+                .then(res => {
+                    console.log(res)
+
+                   
+                })
         })
         .catch(err => {
-            console.log("Error!", err)
+            console.log("Error!", err)      
     })
-    fetch(searchResult)
-        .then(res => {returnssh -T git@github.com})
 }
 searchButton.onclick = getSearchData
 
