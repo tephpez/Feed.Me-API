@@ -7,16 +7,26 @@ body{
     font-family: 'Sansita', sans-serif;
     text-align: center;
 }
+
+
 /* CONCEPT CONTAINER */
 .page1content {
     margin-top: 380px;
     margin: center
 }
 
+
 /* SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS */
 #feedMe{
     margin-top: 150px;
 }
+
+
+/* PLACEHOLDER EDITS  */ /* https://www.codeinwp.com/snippets/change-placeholder-styles-html-inputs-with-css/ */
+::placeholder {
+    font-style: italic;
+}
+
 
 /* RESULTS CONTAINER */
 #recipe{
@@ -24,36 +34,30 @@ body{
     max-height: 750px;
     text-align: left;
     margin-left: 150px;
-
+    margin-right: 150px;
 }
+
+
 /* CONCEPT BLURB */
 h1{
-    
 }
+
 
 /* CONCEPT PARENTHESIS */
 h2{
     font-style: italic;
     font-size: medium;    
-
 }
 
 /* RECIPE NAME */
 h3{
-
 }
 
-/* PREP TIME */
-
-h5{
-
-}
 
 /* INGREDIENTS */
 h4{
     font-size: x-small;
     margin: 1px;
-
 }
 
 button {
@@ -69,7 +73,6 @@ input{
     border-radius: 6px;
     border-width: 1px;
     font-family: 'Sansita', sans-serif;
-
 }
 
 #inputBar{
