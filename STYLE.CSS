@@ -1,7 +1,7 @@
 body{
     background-image: url("./assets/EDITEDBCKGRND.png");
     background-color: #ffcd01;
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
     font-family: 'Sansita', sans-serif;
     text-align: center;
@@ -12,7 +12,7 @@ body{
 /* CONCEPT CONTAINER */
 .page1content {
     margin-top: 380px;
-    margin: center
+    margin: center;
 }
 
 
@@ -22,19 +22,20 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin:0 auto;
     margin-top: 150px;
-    margin: center;
-    height: 150px;    
-    /* background-color: white;
-    opacity: 60%; */
+    width: 500px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.4);
+    
 }
 
 #recipeNameContainer{
-    /* background-color: white; */
     height: 60px;
-    width: 700px;
+    width: 1240px;
     font-size: x-large;
-    padding: 0;
+    margin:0 auto;
+    background-color: rgba(255, 255, 255, 0.4);
 
 }
 
@@ -47,26 +48,17 @@ body{
 
 /* RECIPE CONTAINER */
 #recipeContainer{
-    /* width: 1400px;
-    min-height: 600px;
-    max-height: 750px;
-    margin-left: 150px;
-    margin-right: 150px; */
-    /* background-color: white;
-    opacity: 60%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* width: 1400px;
-    height: 750px; */
 }
 
 /* CARD CONTAINER */
 
 #imageContainer{
-    background-color:darkgreen;
+    background-color: rgba(255, 255, 255, 0.4);
     width:620px;
     height:600px;
 }
@@ -76,21 +68,30 @@ body{
     width:200px;
     height:600px;
     text-align: center;
-    background-color: purple;
+    background-color: rgba(255, 255, 255, 0.4);
     font-size: medium;
 }
 
 #directionsContainer{
-    background-color: chocolate;
+    background-color: rgba(255, 255, 255, 0.4);
     width:400px;
     height:600px;
     font-size: medium;
     font-style: italic;
     padding-left: 10px;
     padding-right:10px;
+    overflow:scroll; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content */
+
 
 }
 
+img{ 
+    max-width: 550px;
+    max-height: 530px;
+    margin-top: 35px;
+    justify-content: center;
+    align-items: center;
+}
 
 /* CONCEPT BLURB */
 h1{
@@ -129,8 +130,10 @@ input{
     font-family: 'Sansita', sans-serif;
 }
 
-/* MAKING TEXT INPUT BAR SQUARE VS ROUNDED INPUT BUTTONS */
+/* ISOLATING INPUT BAR */
 #inputBar{
     border-radius: 0px;
     border-width: 2px;
+    width:200px;
+
 }

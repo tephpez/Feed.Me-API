@@ -2,110 +2,127 @@
 //////// SEARCH RECIPE GENERATOR ////////////
 /////////////////////////////////////////////
 
-// LOCATING SEARCH BUTTON WITHIN THE HTML 
-let searchButton = document.querySelector("#searchButton");
+let searchButton = document.querySelector("#searchButton");  // LOCATING SEARCH BUTTON WITHIN THE HTML
 
-// STATING THE FUNCTION (EVENT)
-async function getSearchData (event) {
-    // "PREVENTDEFAULT" - PREVENTS THE PAGE FROM RELOADING - ALWAYS INCLUDE WHEN USING TEXT INPUT
-    event.preventDefault()
-    let textInput = document.getElementById("inputBar").value;
-    // possibly declare variable
+async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
+    event.preventDefault() // "PREVENTDEFAULT" - PREVENTS THE PAGE FROM RELOADING - ALWAYS INCLUDE WHEN USING TEXT INPUT
+    let textInput = document.getElementById("inputBar").value;    // WHAT USER TYPES INTO INPUT BAR = TEXTINPUT
     
-    // API SOURCE - FILTER BY MAIN INGREDIENT
-    let searchUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${textInput}`;
-    // API SOURCE - RANDOM RESULT
+    let searchUrl = `https://www.themealdb.com/api/json/v1/1/filter.php?i=${textInput}`; // API SOURCE - FILTER BY MAIN INGREDIENT
 
-    // RETRIEVING DATA FROM API
-    fetch(searchUrl)
-        // CONVERTING DATA TO JSON
-        .then(res => {return res.json()})
-        // USING JSON TO PERFORM OUR FUNCTIONS
-        .then(res => {
-            console.log(res);
-            // CODE FOR RANDOM RETURN VIA BRITTANY - https://www.jamesqquick.com/blog/build-a-javascript-memory-match-game/
-            let randomSearchRecipe = Math.ceil(Math.random() * res.meals.length); // <<< RES.MEALS.LENGTH = TOTAL NUMBER OF RECIPES (11) - PICK ANUMBER BETWEEN 0 AND 11
-            console.log(res.meals[randomSearchRecipe].strMeal)
-            let searchResult = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${res.meals[randomSearchRecipe].idMeal}`;
+    fetch(searchUrl)  // RETRIEVING DATA FROM API
+        .then(res => {return res.json()})  // CONVERTING DATA TO JSON
+        .then(res => {  // USING JSON FORMAT TO PERFORM OUR FUNCTIONS
+            console.log(res);  // PULLING RECIPES TO CONSOLE LOG WHERE WE CAN ACCESS DATA
+            let randomSearchRecipe = Math.ceil(Math.random() * res.meals.length);  // <<< RES.MEALS.LENGTH = TOTAL NUMBER OF RECIPES - PICK ANUMBER BETWEEN 0 AND # OF RECIPES
+            console.log(res.meals[randomSearchRecipe].strMeal)  // FILTERING OUT OUR ONE RANDOM RECIPE
+
+            let searchResult = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${res.meals[randomSearchRecipe].idMeal}`;     // API SOURCE - RANDOM RESULT
+
             fetch(searchResult) 
                 .then(res => { return res.json()})
                 .then(res => {
                     console.log(res)
-                    // POPULATING RECIPE NAME
+                    
                     let recipeName = document.querySelector('#recipeName')
-                    recipeName.innerText = res.meals[0].strMeal
-                    // POPULATING INGREDIENTS
-                    let ingredient1 = document.querySelector('#ingredient1')
-                    ingredient1.innerText = res.meals[0].strIngredient1
+                    recipeName.innerText = res.meals[0].strMeal.toUpperCase() // POPULATING RECIPE NAME            
+                    
+                    let ingredient1 = document.querySelector('#ingredient1') // POPULATING INGREDIENTS
+                    ingredient1.innerText = res.meals[0].strIngredient1.toLowerCase()
 
                     let ingredient2 = document.querySelector('#ingredient2')
-                    ingredient2.innerText = res.meals[0].strIngredient2
+                    ingredient2.innerText = res.meals[0].strIngredient2.toLowerCase()
 
                     let ingredient3 = document.querySelector('#ingredient3')
-                    ingredient3.innerText = res.meals[0].strIngredient3
+                    ingredient3.innerText = res.meals[0].strIngredient3.toLowerCase()
 
                     let ingredient4 = document.querySelector('#ingredient4')
-                    ingredient4.innerText = res.meals[0].strIngredient4
+                    ingredient4.innerText = res.meals[0].strIngredient4.toLowerCase()
 
                     let ingredient5 = document.querySelector('#ingredient5')
-                    ingredient5.innerText = res.meals[0].strIngredient5
+                    ingredient5.innerText = res.meals[0].strIngredient5.toLowerCase()
 
                     let ingredient6 = document.querySelector('#ingredient6')
-                    ingredient6.innerText = res.meals[0].strIngredient6
+                    ingredient6.innerText = res.meals[0].strIngredient6.toLowerCase()
 
                     let ingredient7 = document.querySelector('#ingredient7')
-                    ingredient7.innerText = res.meals[0].strIngredient7
+                    ingredient7.innerText = res.meals[0].strIngredient7.toLowerCase()
 
                     let ingredient8 = document.querySelector('#ingredient8')
-                    ingredient8.innerText = res.meals[0].strIngredient8
+                    ingredient8.innerText = res.meals[0].strIngredient8.toLowerCase()
 
                     let ingredient9 = document.querySelector('#ingredient9')
-                    ingredient9.innerText = res.meals[0].strIngredient9
+                    ingredient9.innerText = res.meals[0].strIngredient9.toLowerCase()
 
                     let ingredient10 = document.querySelector('#ingredient10')
-                    ingredient10.innerText = res.meals[0].strIngredient10
+                    ingredient10.innerText = res.meals[0].strIngredient10.toLowerCase()
 
                     let ingredient11 = document.querySelector('#ingredient11')
-                    ingredient11.innerText = res.meals[0].strIngredient11
+                    ingredient11.innerText = res.meals[0].strIngredient11.toLowerCase()
 
                     let ingredient12 = document.querySelector('#ingredient12')
-                    ingredient12.innerText = res.meals[0].strIngredient12
+                    ingredient12.innerText = res.meals[0].strIngredient12.toLowerCase()
 
                     let ingredient13 = document.querySelector('#ingredient13')
-                    ingredient13.innerText = res.meals[0].strIngredient13
+                    ingredient13.innerText = res.meals[0].strIngredient13.toLowerCase()
 
                     let ingredient14 = document.querySelector('#ingredient14')
-                    ingredient14.innerText = res.meals[0].strIngredient14
+                    ingredient14.innerText = res.meals[0].strIngredient14.toLowerCase()
 
                     let ingredient15 = document.querySelector('#ingredient15')
-                    ingredient15.innerText = res.meals[0].strIngredient15
+                    ingredient15.innerText = res.meals[0].strIngredient15.toLowerCase()
 
                     let ingredient16 = document.querySelector('#ingredient16')
-                    ingredient16.innerText = res.meals[0].strIngredient16
+                    ingredient16.innerText = res.meals[0].strIngredient16.toLowerCase()
 
                     let ingredient17 = document.querySelector('#ingredient17')
-                    ingredient17.innerText = res.meals[0].strIngredient17
+                    ingredient17.innerText = res.meals[0].strIngredient17.toLowerCase()
 
                     let ingredient18 = document.querySelector('#ingredient18')
-                    ingredient18.innerText = res.meals[0].strIngredient18
+                    ingredient18.innerText = res.meals[0].strIngredient18.toLowerCase()
 
                     let ingredient19 = document.querySelector('#ingredient19')
-                    ingredient19.innerText = res.meals[0].strIngredient19
+                    ingredient19.innerText = res.meals[0].strIngredient19.toLowerCase()
 
                     let ingredient20 = document.querySelector('#ingredient20')
-                    ingredient20.innerText = res.meals[0].strIngredient20
-                    // POPULATING DIRECTIONS
-                    let directions = document.querySelector('#directions')
+                    ingredient20.innerText = res.meals[0].strIngredient20.toLowerCase()
+                    
+
+                    let directions = document.querySelector('#directions') // POPULATING DIRECTIONS
                     directions.innerText = res.meals[0].strInstructions
 
-                    // POPULATING IMAGE
+
+                    let recipeImage = document.querySelector('#recipeImage') // POPULATING IMAGE
+                    recipeImage.src = res.meals[0].strMealThumb 
                 })
         })
         .catch(err => {
-            console.log("Error!", err)      
+            console.log("Error!", err)   // DEFINING ERROR FUNCTION
     })
 }
-searchButton.onclick = getSearchData
+searchButton.onclick = getSearchData  // SETTING THE TRIGGER FOR THE ABOVE FUNCTIONS
+
+
+
+
+// IF INGREDIENT SLOT HAS A VALUE: POPULATE DATA TO HTML
+// IF INGREDIENT SLOT HAS NO VALUE, OR "NULL": IGNORE/LEAVE BLANK
+
+// if(ingredient slot = ""){
+//     console.log(ignore function)
+// }
+
+// else if(ingredient slot = "null"){
+//     console.log(ignore function)
+// }
+// else
+//     console.log(res)
+
+
+
+
+
+
 
 
 

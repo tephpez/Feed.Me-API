@@ -13,7 +13,10 @@
 <body>
 
 <!-- SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS -->
-    <div id="searchContainer"><br>
+    <div id="searchContainer">
+        <button id="homeButton">
+            <a href="INDEX.HTML">home</a>
+        </button> <br>
         <form id="searchBar">
             <input 
                 id="inputBar" 
@@ -24,20 +27,16 @@
                 id="searchButton"
                 value="feed.me">
             </input> 
-            <!-- <input
-                type="button"
-                id="surpriseButton"
-                value="surprise.me">
-            </input> <br> <br> -->
         </form>
-        <div id="recipeNameContainer">
-            <h3 id="recipeName"></h3>
-        </div>
     </div> <br>
 
-<!-- RESULTS CONTAINER -  RECIPE NAME & INGREDIENTS LIST -->
-<main id="recipeContainer">
+<div id="recipeNameContainer" style="display:none;">
+    <h3 id="recipeName"></h3>
+</div>
 
+<!-- RESULTS CONTAINER -  RECIPE NAME & INGREDIENTS LIST -->
+
+<main id="recipeContainer" style="display:none;">
      <div id="ingredientsContainer"><br>
         <h4 id="ingredient1"></h4>
         <h4 id="ingredient2"></h4>
@@ -64,17 +63,15 @@
         <h5 id="directions"></h5>
      </div>
      <div id="imageContainer">
+        <img src="" id="recipeImage"
      </div>
 </div> 
-</main> <br> <br> <br>
+</main> <!-- <br> <br> <br>
     <input
         type="button"
         id="makeButton"
         value="make.me">
-    </input><br><br>
-    <button id="homeButton">
-        <a href="INDEX.HTML">home</a>
-    </button>
+    </input><br><br> -->
 
     <script src="script.js"></script>
 </body>
