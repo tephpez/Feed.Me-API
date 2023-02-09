@@ -23,70 +23,109 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
                 .then(res => { return res.json()})
                 .then(res => {
                     console.log(res)
-                    
-                    let recipeName = document.querySelector('#recipeName')
-                    recipeName.innerText = res.meals[0].strMeal.toUpperCase() // POPULATING RECIPE NAME            
-                    
-                    let ingredient1 = document.querySelector('#ingredient1') // POPULATING INGREDIENTS
-                    ingredient1.innerText = res.meals[0].strIngredient1.toLowerCase()
 
+                    let recipeName = document.querySelector('#recipeName')  // POPULATING RECIPE NAME
+                    recipeName.innerText = res.meals[0].strMeal                    
+                    
+                    if(res.meals[0].strIngredient1 != null && res.meals[0].strIngredient1 != ""){    // POPULATING INGREDIENTS
+                    let ingredient1 = document.querySelector('#ingredient1')
+                    ingredient1.innerText = `${res.meals[0].strIngredient1}   -   ${res.meals[0].strMeasure1}`
+                    }
+
+                    if(res.meals[0].strIngredient2 != null && res.meals[0].strIngredient2 != ""){ 
                     let ingredient2 = document.querySelector('#ingredient2')
-                    ingredient2.innerText = res.meals[0].strIngredient2.toLowerCase()
+                    ingredient2.innerText = `${res.meals[0].strIngredient2}   -   ${res.meals[0].strMeasure2}`
+                    }
 
+                    if(res.meals[0].strIngredient3 != null && res.meals[0].strIngredient3 != ""){
                     let ingredient3 = document.querySelector('#ingredient3')
-                    ingredient3.innerText = res.meals[0].strIngredient3.toLowerCase()
+                    ingredient3.innerText = `${res.meals[0].strIngredient3}   -   ${res.meals[0].strMeasure3}`
+                    }
 
+                    if(res.meals[0].strIngredient4 != null && res.meals[0].strIngredient4 != ""){
                     let ingredient4 = document.querySelector('#ingredient4')
-                    ingredient4.innerText = res.meals[0].strIngredient4.toLowerCase()
+                    ingredient4.innerText = `${res.meals[0].strIngredient4}   -   ${res.meals[0].strMeasure4}`
+                    }
 
+                    if(res.meals[0].strIngredient5 != null && res.meals[0].strIngredient5 != ""){
                     let ingredient5 = document.querySelector('#ingredient5')
-                    ingredient5.innerText = res.meals[0].strIngredient5.toLowerCase()
+                    ingredient5.innerText = `${res.meals[0].strIngredient5}   -   ${res.meals[0].strMeasure5}`
+                    }
 
+                    if(res.meals[0].strIngredient6 != null && res.meals[0].strIngredient6 != ""){
                     let ingredient6 = document.querySelector('#ingredient6')
-                    ingredient6.innerText = res.meals[0].strIngredient6.toLowerCase()
+                    ingredient6.innerText = `${res.meals[0].strIngredient6}   -   ${res.meals[0].strMeasure6}`
+                    }
 
+                    if(res.meals[0].strIngredient7 != null && res.meals[0].strIngredient7 != ""){
                     let ingredient7 = document.querySelector('#ingredient7')
-                    ingredient7.innerText = res.meals[0].strIngredient7.toLowerCase()
+                    ingredient7.innerText = `${res.meals[0].strIngredient7}   -   ${res.meals[0].strMeasure7}`
+                    }
 
+                    if(res.meals[0].strIngredient8 != null && res.meals[0].strIngredient8 != ""){
                     let ingredient8 = document.querySelector('#ingredient8')
-                    ingredient8.innerText = res.meals[0].strIngredient8.toLowerCase()
+                    ingredient8.innerText = `${res.meals[0].strIngredient8}   -   ${res.meals[0].strMeasure8}`
+                    }
 
+                    if(res.meals[0].strIngredient9 != null && res.meals[0].strIngredient9 != ""){
                     let ingredient9 = document.querySelector('#ingredient9')
-                    ingredient9.innerText = res.meals[0].strIngredient9.toLowerCase()
+                    ingredient9.innerText = `${res.meals[0].strIngredient9}   -   ${res.meals[0].strMeasure}`
+                    }
 
+                    if(res.meals[0].strIngredient10 != null && res.meals[0].strIngredient10 != ""){
                     let ingredient10 = document.querySelector('#ingredient10')
-                    ingredient10.innerText = res.meals[0].strIngredient10.toLowerCase()
+                    ingredient10.innerText = `${res.meals[0].strIngredient10}   -   ${res.meals[0].strMeasure10}`
+                    }
 
+                    if(res.meals[0].strIngredient11 != null && res.meals[0].strIngredient11 != ""){
                     let ingredient11 = document.querySelector('#ingredient11')
-                    ingredient11.innerText = res.meals[0].strIngredient11.toLowerCase()
+                    ingredient11.innerText = `${res.meals[0].strIngredient11}   -   ${res.meals[0].strMeasure11}`
+                    }
 
+                    if(res.meals[0].strIngredient12 != null && res.meals[0].strIngredient12 != ""){
                     let ingredient12 = document.querySelector('#ingredient12')
-                    ingredient12.innerText = res.meals[0].strIngredient12.toLowerCase()
+                    ingredient12.innerText = `${res.meals[0].strIngredient12}   -   ${res.meals[0].strMeasure12}`
+                    }
 
+                    if(res.meals[0].strIngredient13 != null && res.meals[0].strIngredient13 != ""){
                     let ingredient13 = document.querySelector('#ingredient13')
-                    ingredient13.innerText = res.meals[0].strIngredient13.toLowerCase()
+                    ingredient13.innerText = `${res.meals[0].strIngredient13}   -   ${res.meals[0].strMeasure13}`
+                    }
 
+                    if(res.meals[0].strIngredient14 != null && res.meals[0].strIngredient14 != ""){
                     let ingredient14 = document.querySelector('#ingredient14')
-                    ingredient14.innerText = res.meals[0].strIngredient14.toLowerCase()
+                    ingredient14.innerText = `${res.meals[0].strIngredient14}   -   ${res.meals[0].strMeasure14}`
+                    }
 
+                    if(res.meals[0].strIngredient15 != null && res.meals[0].strIngredient15 != ""){
                     let ingredient15 = document.querySelector('#ingredient15')
-                    ingredient15.innerText = res.meals[0].strIngredient15.toLowerCase()
+                    ingredient15.innerText = `${res.meals[0].strIngredient15}   -   ${res.meals[0].strMeasure15}`
+                    }
 
+                    if(res.meals[0].strIngredient16 != null && res.meals[0].strIngredient16 != ""){
                     let ingredient16 = document.querySelector('#ingredient16')
-                    ingredient16.innerText = res.meals[0].strIngredient16.toLowerCase()
+                    ingredient16.innerText = `${res.meals[0].strIngredient16}   -   ${res.meals[0].strMeasure16}`
+                    }
 
+                    if(res.meals[0].strIngredient17 != null && res.meals[0].strIngredient17 != ""){
                     let ingredient17 = document.querySelector('#ingredient17')
-                    ingredient17.innerText = res.meals[0].strIngredient17.toLowerCase()
+                    ingredient17.innerText = `${res.meals[0].strIngredient17}   -   ${res.meals[0].strMeasure17}`
+                    }
 
+                    if(res.meals[0].strIngredient18 != null && res.meals[0].strIngredient18 != ""){
                     let ingredient18 = document.querySelector('#ingredient18')
-                    ingredient18.innerText = res.meals[0].strIngredient18.toLowerCase()
+                    ingredient18.innerText = `${res.meals[0].strIngredient18}   -   ${res.meals[0].strMeasure18}`
+                    }
 
+                    if(res.meals[0].strIngredient19 != null && res.meals[0].strIngredient19 != ""){
                     let ingredient19 = document.querySelector('#ingredient19')
-                    ingredient19.innerText = res.meals[0].strIngredient19.toLowerCase()
+                    ingredient19.innerText = `${res.meals[0].strIngredient19}   -   ${res.meals[0].strMeasure19}`
+                    }
 
+                    if(res.meals[0].strIngredient20 != null && res.meals[0].strIngredient20 != ""){
                     let ingredient20 = document.querySelector('#ingredient20')
-                    ingredient20.innerText = res.meals[0].strIngredient20.toLowerCase()
-                    
+                    ingredient20.innerText = `${res.meals[0].strIngredient20}   -   ${res.meals[0].strMeasure20}`
+                    }
 
                     let directions = document.querySelector('#directions') // POPULATING DIRECTIONS
                     directions.innerText = res.meals[0].strInstructions
