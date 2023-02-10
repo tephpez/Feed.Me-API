@@ -7,8 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="print.css">  <!-- https://www.w3schools.com/tags/att_link_media.asp -->
+    <link rel="stylesheet" type="text/css" href="STYLE.CSS">
+    <link rel="stylesheet" type="text/css" href="print.css" media="print">  <!-- https://www.w3schools.com/tags/att_link_media.asp -->
     <title>Om nom nom nom</title>
 </head>
 <body>
@@ -32,12 +32,14 @@
         </form>
     </div>
 
-<div id="recipeNameContainer" style="display:none;">
+<!-- <div id="recipeNameContainer" style="display:none;"> -->
+<div id="recipeNameContainer"></div>
     <h3 id="recipeName"></h3>
 </div>
 
 <div id="noResultsContainer" style="display:none;">
-    <h3 id="noResultsError">Sorry friend! We are fresh out of recipes with that ingredient. Try again!</h3>
+    <h3 id="noResultsError">Sorry friend! We are fresh out of recipes with that ingredient. <br> <br>
+                            Try again!</h3>
 </div>
 
 <!-- RESULTS CONTAINER -  RECIPE NAME, INGREDIENTS, DIRECTIONS & IMG -->
