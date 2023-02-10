@@ -8,40 +8,36 @@ body{
     color: black;
 }
 
+/*********** HOME PAGE *************/
 
 /* CONCEPT CONTAINER */
-.page1content {
+#conceptContainer {
     margin-top: 380px;
     margin: center;
 }
+/* CONCEPT BLURB */
+h1{
+    font-size: 38px;
+}
+/* CONCEPT PARENTHESIS */
+h2{
+    font-style: italic;
+    font-size: medium;    
+}
 
 
-/* SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS */
+/*********** RECIPE PAGE *************/
+
+/* SEARCH CONTAINER - INPUT BAR & FEED.ME BUTTON */
 #searchContainer{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin:0 auto;
-    margin-top: 150px;
-    height: 150px;
-
-    
+    margin-top: 80px;
+    height: 100px;
 }
-
-#recipeNameContainer{
-    font-size: x-large;
-    margin:0 auto;
-    background-color: rgba(255, 255, 255, 0.4);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-width: ;
-
-}
-
-
 /* PLACEHOLDER EDITS  */ /* https://www.codeinwp.com/snippets/change-placeholder-styles-html-inputs-with-css/ */
 ::placeholder {
     font-style: italic;
@@ -49,33 +45,48 @@ body{
 
 
 /* RECIPE CONTAINER */
+
 #recipeContainer{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    font-size: 50px;
     /* background-color: rgba(255, 255, 255, 0.4); */
-
 }
 
-/* CARD CONTAINER */
+#recipeNameContainer{
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1240px;
+    min-width: 820;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+}
+/* RECIPE NAME */
+h3{
+    font-size: 40px;
+    text-decoration: underline;}
 
+/* RECIPE CARD ELEMENTS */
 #imageContainer{
     background-color: rgba(255, 255, 255, 0.4);
     width:620px;
     height:600px;
+    /* justify-content:space-between; */
+    /* align-items: center; */
 }
 #ingredientsContainer{
-    /* min-height: 500px;
-    max-height: 750px; */
     width:200px;
     height:600px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.4);
     font-size: medium;
+    padding-left: 2px;
 }
-
 #directionsContainer{
     background-color: rgba(255, 255, 255, 0.4);
     width:400px;
@@ -86,31 +97,12 @@ body{
     padding-right:10px;
     overflow:scroll; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content */
 }
-
+/* IMAGE */
 img{ 
-    max-width: 550px;
+    max-width: 540px;
     max-height: 530px;
     margin-top: 35px;
-    justify-content: center;
-    align-items: center;
 }
-
-/* CONCEPT BLURB */
-h1{
-}
-
-
-/* CONCEPT PARENTHESIS */
-h2{
-    font-style: italic;
-    font-size: medium;    
-}
-
-/* RECIPE NAME */
-h3{
-    font-size: larger;
-}
-
 
 /* INGREDIENTS */
 h4{
@@ -137,4 +129,5 @@ input{
     border-radius: 0px;
     border-width: 2px;
     width:200px;
+    height: 20px;
 }

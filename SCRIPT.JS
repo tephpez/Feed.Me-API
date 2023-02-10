@@ -14,16 +14,22 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
         .then(res => {return res.json()})  // CONVERTING DATA TO JSON
         .then(res => {  // USING JSON FORMAT TO PERFORM OUR FUNCTIONS
             console.log(res);  // PULLING RECIPES TO CONSOLE LOG WHERE WE CAN ACCESS DATA
+
+            if(res.meals === null){  // ERROR MESSAGE FOR NULL RESULTS
+                alert("Sorry friend! We are fresh out of recipes with that ingredient. Try again!")
+        }
             let randomSearchRecipe = Math.ceil(Math.random() * res.meals.length);  // <<< RES.MEALS.LENGTH = TOTAL NUMBER OF RECIPES - PICK ANUMBER BETWEEN 0 AND # OF RECIPES
             console.log(res.meals[randomSearchRecipe].strMeal)  // FILTERING OUT OUR ONE RANDOM RECIPE
+        
 
             let searchResult = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${res.meals[randomSearchRecipe].idMeal}`;     // API SOURCE - RANDOM FILTERED RESULT
 
             fetch(searchResult) 
                 .then(res => { return res.json()})
                 .then(res => {
-                    console.log(res)
+                    console.log(res.meals)
 
+            
                     let recipeName = document.querySelector('#recipeName')  // POPULATING RECIPE NAME
                     recipeName.innerText = res.meals[0].strMeal.toUpperCase()         
                     document.querySelector('#recipeNameContainer').style=""  // RESTORES RECIPE CONTAINERS
@@ -126,147 +132,4 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
 searchButton.onclick = getSearchData  // SETTING THE TRIGGER FOR THE ABOVE FUNCTIONS
 
 
-// searchButton.addEventListener("click", function(){
-//     e.preventDefault()
-//     location.reload()
-// }
-//     // e.preventDefault()
-//     // location.reload()
-//     // // getSearchData
-// )
-// searchButton.addEventListener("click",
-//     // window.location.reload()
-//     getSearchData
-// )
 
-// // getSearchData{window.location.reload()})
-// // function refreshPage(){
-// //     window.location.reload()
-// }
-
-
-
-// IF INGREDIENT SLOT HAS A VALUE: POPULATE DATA TO HTML
-// IF INGREDIENT SLOT HAS NO VALUE, OR "NULL": IGNORE/LEAVE BLANK
-
-// if(ingredient slot = ""){
-//     console.log(ignore function)
-// }
-
-// else if(ingredient slot = "null"){
-//     console.log(ignore function)
-// }
-// else
-//     console.log(res)
-
-
-
-
-
-
-
-
-
-
-// ///////////////////////////////////////////// 
-// /////// SURPRISE RECIPE GENERATOR ///////////
-// /////////////////////////////////////////////
-
-// // LOCATING SURPRISE BUTTON WITHIN THE HTML
-// let surpriseButton = document.querySelector("#surpriseButton");
-
-// // STATING THE FUNCTION (EVENT)
-// async function getSurpriseData (event) {
-//     // "PREVENTDEFAULT" - PREVENTS THE PAGE FROM RELOADING - ALWAYS INCLUDE WHEN USING TEXT INPUT
-//     // event.preventDefault()
-
-//     // API SOURCE
-//     const randomUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
-
-//     // RETRIEVING DATA FROM API
-//     fetch(randomUrl)
-//         // CONVERTING DATA TO JSON
-//         .then(res => {return res.json()})
-//         // USING DATA TO PERFORM OUR FUNCTIONS
-//         .then(res => {
-//             // CONSOLE LOGGING THE RESPONSE TO GRAB DATA FROM
-//             console.log("success!", res.meals[0].strMeal)
-//             // POPULATING RECIPE NAME
-//             let recipeName = document.querySelector('#recipeName')
-//             recipeName.innerText = res.meals[0].strMeal
-//             // POPULATING INGREDIENTS
-//             let ingredient1 = document.querySelector('#ingredient1')
-//             ingredient1.innerText = `${res.meals[0].strIngredient1}   -   ${res.meals[0].strMeasure1}`
-
-//             let ingredient2 = document.querySelector('#ingredient2')
-//             ingredient2.innerText = `${res.meals[0].strIngredient2}   -   ${res.meals[0].strMeasure2}`
-
-//             let ingredient3 = document.querySelector('#ingredient3')
-//             ingredient3.innerText = `${res.meals[0].strIngredient3}   -   ${res.meals[0].strMeasure3}`
-
-//             let ingredient4 = document.querySelector('#ingredient4')
-//             ingredient4.innerText = `${res.meals[0].strIngredient4}   -   ${res.meals[0].strMeasure4}`
-
-//             let ingredient5 = document.querySelector('#ingredient5')
-//             ingredient5.innerText = `${res.meals[0].strIngredient5}   -   ${res.meals[0].strMeasure5}`
-
-//             let ingredient6 = document.querySelector('#ingredient6')
-//             ingredient6.innerText = `${res.meals[0].strIngredient6}   -   ${res.meals[0].strMeasure6}`
-
-//             let ingredient7 = document.querySelector('#ingredient7')
-//             ingredient7.innerText = `${res.meals[0].strIngredient7}   -   ${res.meals[0].strMeasure7}`
-
-//             let ingredient8 = document.querySelector('#ingredient8')
-//             ingredient8.innerText = `${res.meals[0].strIngredient8}   -   ${res.meals[0].strMeasure8}`
-
-//             let ingredient9 = document.querySelector('#ingredient9')
-//             ingredient9.innerText = `${res.meals[0].strIngredient9}   -   ${res.meals[0].strMeasure}`
-
-//             let ingredient10 = document.querySelector('#ingredient10')
-//             ingredient10.innerText = `${res.meals[0].strIngredient10}   -   ${res.meals[0].strMeasure10}`
-
-//             let ingredient11 = document.querySelector('#ingredient11')
-//             ingredient11.innerText = `${res.meals[0].strIngredient11}   -   ${res.meals[0].strMeasure11}`
-
-//             let ingredient12 = document.querySelector('#ingredient12')
-//             ingredient12.innerText = `${res.meals[0].strIngredient12}   -   ${res.meals[0].strMeasure12}`
-
-//             let ingredient13 = document.querySelector('#ingredient13')
-//             ingredient13.innerText = `${res.meals[0].strIngredient13}   -   ${res.meals[0].strMeasure13}`
-
-//             let ingredient14 = document.querySelector('#ingredient14')
-//             ingredient14.innerText = `${res.meals[0].strIngredient14}   -   ${res.meals[0].strMeasure14}`
-
-//             let ingredient15 = document.querySelector('#ingredient15')
-//             ingredient15.innerText = `${res.meals[0].strIngredient15}   -   ${res.meals[0].strMeasure15}`
-
-//             let ingredient16 = document.querySelector('#ingredient16')
-//             ingredient16.innerText = `${res.meals[0].strIngredient16}   -   ${res.meals[0].strMeasure16}`
-
-//             let ingredient17 = document.querySelector('#ingredient17')
-//             ingredient17.innerText = `${res.meals[0].strIngredient17}   -   ${res.meals[0].strMeasure17}`
-
-//             let ingredient18 = document.querySelector('#ingredient18')
-//             ingredient18.innerText = `${res.meals[0].strIngredient18}   -   ${res.meals[0].strMeasure18}`
-
-//             let ingredient19 = document.querySelector('#ingredient19')
-//             ingredient19.innerText = `${res.meals[0].strIngredient19}   -   ${res.meals[0].strMeasure19}`
-
-//             let ingredient20 = document.querySelector('#ingredient20')
-//             ingredient20.innerText = `${res.meals[0].strIngredient20}   -   ${res.meals[0].strMeasure20}`
-//             // POPULATING DIRECTIONS
-//             let directions = document.querySelector('#directions')
-//             directions.innerText = res.meals[0].strInstructions
-
-//             // POPULATING IMAGE
-
-
-
-//         })
-//         // DEFINING ERROR FUNCTION FAILSAFE
-//         .catch(err => {
-//             console.log("Error!", err)
-//     })
-// }
-// // ASSIGNING FUNCTION CATALYST = HTML BUTTON ELEMENT
-// surpriseButton.onclick = getSurpriseData

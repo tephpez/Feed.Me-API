@@ -12,11 +12,12 @@
 </head>
 <body>
 
-<!-- SEARCH CONTAINER - INPUT, FEED.ME & SURPRISE.ME BUTTONS -->
+    <br></nbr><button id="homeButton">
+        <a href="INDEX.HTML">home</a>
+    </button> <br>
+
+<!-- SEARCH CONTAINER - INPUT BAR & FEED.ME BUTTON -->
     <div id="searchContainer">
-        <button id="homeButton">
-            <a href="INDEX.HTML">home</a>
-        </button> <br>
         <form id="searchBar">
             <input 
                 id="inputBar" 
@@ -28,55 +29,46 @@
                 value="feed.me">
             </input> 
         </form>
-    </div> <br>
+    </div>
 
 <div id="recipeNameContainer" style="display:none;">
     <h3 id="recipeName"></h3>
 </div>
 
-<!-- RESULTS CONTAINER -  RECIPE NAME & INGREDIENTS LIST -->
+<!-- RESULTS CONTAINER -  RECIPE NAME, INGREDIENTS, DIRECTIONS & IMG -->
 
-<main id="recipeContainer" style="display:none;">
-     <div id="ingredientsContainer"><br>
-        <h4 id="ingredient1"></h4>
-        <h4 id="ingredient2"></h4>
-        <h4 id="ingredient3"></h4>
-        <h4 id="ingredient4"></h4>
-        <h4 id="ingredient5"></h4>
-        <h4 id="ingredient6"></h4>
-        <h4 id="ingredient7"></h4>
-        <h4 id="ingredient8"></h4>
-        <h4 id="ingredient9"></h4>
-        <h4 id="ingredient10"></h4>
-        <h4 id="ingredient11"></h4>
-        <h4 id="ingredient12"></h4>
-        <h4 id="ingredient13"></h4>
-        <h4 id="ingredient14"></h4>
-        <h4 id="ingredient15"></h4>
-        <h4 id="ingredient16"></h4>
-        <h4 id="ingredient17"></h4>
-        <h4 id="ingredient18"></h4>
-        <h4 id="ingredient19"></h4>
-        <h4 id="ingredient20"></h4>
-     </div>
-     <div id="directionsContainer">
-        <h5 id="directions"></h5>
-     </div>
-     <div id="imageContainer">
-        <img src="" id="recipeImage"
-     </div>
-</div> 
-</main> <br> <br> <br>
-    <button id="startButton">
-    <a href="PRINTABLE.HTML">print.me</a>
-    <!-- <input
-        type="button"
-        id="makeButton"
-        value="make.me">
-    </input><br><br> -->
-
+    <main id="recipeContainer" style="display:none;">
+        <div id="ingredientsContainer"><br><br>
+            <h4 id="ingredient1"></h4>
+            <h4 id="ingredient2"></h4>
+            <h4 id="ingredient3"></h4>
+            <h4 id="ingredient4"></h4>
+            <h4 id="ingredient5"></h4>
+            <h4 id="ingredient6"></h4>
+            <h4 id="ingredient7"></h4>
+            <h4 id="ingredient8"></h4>
+            <h4 id="ingredient9"></h4>
+            <h4 id="ingredient10"></h4>
+            <h4 id="ingredient11"></h4>
+            <h4 id="ingredient12"></h4>
+            <h4 id="ingredient13"></h4>
+            <h4 id="ingredient14"></h4>
+            <h4 id="ingredient15"></h4>
+            <h4 id="ingredient16"></h4>
+            <h4 id="ingredient17"></h4>
+            <h4 id="ingredient18"></h4>
+            <h4 id="ingredient19"></h4>
+            <h4 id="ingredient20"></h4>
+        </div>
+        <div id="directionsContainer"><br>
+            <h5 id="directions"></h5>
+        </div>
+        <div id="imageContainer">
+            <img src="" id="recipeImage"> <br> <br>
+        <!-- <button id="printButton">
+            <a href="PRINTABLE.HTML">print.me</a> -->
+        </div> 
+    </main> <br> <br> <br>
     <script src="script.js"></script>
 </body>
 </html>
-
-
