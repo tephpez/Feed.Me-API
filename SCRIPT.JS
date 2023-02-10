@@ -16,12 +16,13 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
             console.log(res);  // PULLING RECIPES TO CONSOLE LOG WHERE WE CAN ACCESS DATA
 
             if(res.meals === null){  // ERROR MESSAGE FOR NULL RESULTS
-                alert("Sorry friend! We are fresh out of recipes with that ingredient. Try again!")
-        }
+               document.querySelector('#noResultsContainer').style="" // RESTORES ERROR MESSAGE CONTAINER
+               document.querySelector('#recipeNameContainer').style="display:none"  // HIDES EXISTNG RECIPE CONTAINERS
+               document.querySelector('#recipeContainer').style="display:none"
+            }
             let randomSearchRecipe = Math.ceil(Math.random() * res.meals.length);  // <<< RES.MEALS.LENGTH = TOTAL NUMBER OF RECIPES - PICK ANUMBER BETWEEN 0 AND # OF RECIPES
             console.log(res.meals[randomSearchRecipe].strMeal)  // FILTERING OUT OUR ONE RANDOM RECIPE
         
-
             let searchResult = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${res.meals[randomSearchRecipe].idMeal}`;     // API SOURCE - RANDOM FILTERED RESULT
 
             fetch(searchResult) 
@@ -33,7 +34,8 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
                     let recipeName = document.querySelector('#recipeName')  // POPULATING RECIPE NAME
                     recipeName.innerText = res.meals[0].strMeal.toUpperCase()         
                     document.querySelector('#recipeNameContainer').style=""  // RESTORES RECIPE CONTAINERS
-                    document.querySelector('#recipeContainer').style=""            
+                    document.querySelector('#recipeContainer').style=""
+                    document.querySelector('#noResultsContainer').style="display:none"   // HIDES ERROR MESSAGE CONTAINER         
                     
                     if(res.meals[0].strIngredient1 != null && res.meals[0].strIngredient1 != ""){    // POPULATING INGREDIENTS
                     let ingredient1 = document.querySelector('#ingredient1')

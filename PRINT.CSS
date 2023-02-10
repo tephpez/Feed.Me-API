@@ -69,13 +69,7 @@ h2{
 /* RECIPE NAME */
 h3{
     font-size: 40px;
-    text-decoration: underline;
-}
-
-#noResultsError{
-    font-size:medium;
-    text-decoration: none;
-}
+    text-decoration: underline;}
 
 /* RECIPE CARD ELEMENTS */
 #imageContainer{
