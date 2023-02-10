@@ -16,7 +16,7 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
             console.log(res);  // PULLING RECIPES TO CONSOLE LOG WHERE WE CAN ACCESS DATA
 
             if(res.meals === null){  // ERROR MESSAGE FOR NULL RESULTS
-               document.querySelector('#noResultsContainer').style="" // RESTORES ERROR MESSAGE CONTAINER
+               document.querySelector('#noResultsContainer').style="" // RESTORES HIDDEN ERROR MESSAGE CONTAINER
                document.querySelector('#recipeNameContainer').style="display:none"  // HIDES EXISTNG RECIPE CONTAINERS
                document.querySelector('#recipeContainer').style="display:none"
             }
@@ -30,10 +30,9 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
                 .then(res => {
                     console.log(res.meals)
 
-            
                     let recipeName = document.querySelector('#recipeName')  // POPULATING RECIPE NAME
                     recipeName.innerText = res.meals[0].strMeal.toUpperCase()         
-                    document.querySelector('#recipeNameContainer').style=""  // RESTORES RECIPE CONTAINERS
+                    document.querySelector('#recipeNameContainer').style=""  // RESTORES HIDDEN RECIPE CONTAINERS
                     document.querySelector('#recipeContainer').style=""
                     document.querySelector('#noResultsContainer').style="display:none"   // HIDES ERROR MESSAGE CONTAINER         
                     
@@ -118,7 +117,6 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
                     ingredient20.innerText = `${res.meals[0].strIngredient20.toLowerCase()}   -   ${res.meals[0].strMeasure20.toLowerCase()}`
                     }
 
-
                     let directions = document.querySelector('#directions') // POPULATING DIRECTIONS
                     directions.innerText = res.meals[0].strInstructions
 
@@ -132,6 +130,8 @@ async function getSearchData (event) {  // STATING THE FUNCTION (EVENT)
     })
 }
 searchButton.onclick = getSearchData  // SETTING THE TRIGGER FOR THE ABOVE FUNCTIONS
+
+
 
 
 
